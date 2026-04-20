@@ -130,6 +130,21 @@ public class MovieServiceImpl implements MovieService {
         return response;
     }
 
+    @Override
+    public MovieResponse getUpcomingMovies(int page) {
+
+        String url = String.format(
+                "%s/movie/upcoming?page=%d",
+                BASE_URL,
+                page
+        );
+
+        MovieResponse movieResponse = fetchMovieList(url);
+        attachTrailers(movieResponse);
+
+        return movieResponse;
+    }
+
     // Movie Detail
     @Override
     public Movie getMovieDetail(int movieId) {

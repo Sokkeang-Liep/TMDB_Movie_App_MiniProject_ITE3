@@ -10,6 +10,7 @@ public interface MovieService {
     MovieResponse searchMovies(String query, int page);
     List<Genre> getGenres();
     MovieResponse getMoviesByGenre(Integer page, String genreId);
+    MovieResponse getUpcomingMovies(int page);
     Movie getMovieDetail(int movieId);
     String getTrailerUrl(int movieId);
     MovieResponse getPopularMovies(int page);

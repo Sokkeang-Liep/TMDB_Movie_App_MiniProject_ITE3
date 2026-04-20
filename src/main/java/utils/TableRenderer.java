@@ -143,8 +143,9 @@ public class TableRenderer {
 
         tableMenu.addCell("MOVIE SEARCH", CENTER, 1);
         tableMenu.addCell("1-> Search Movie");
-        tableMenu.addCell("2-> Show Popular Movies");
-        tableMenu.addCell("3-> List Movie Category");
+        tableMenu.addCell("2-> Show Up Coming Movie");
+        tableMenu.addCell("3-> Show Popular Movies");
+        tableMenu.addCell("4-> List Movie Category");
         tableMenu.addCell("0->Exit");
 
         System.out.println(tableMenu.render());

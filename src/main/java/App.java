@@ -61,9 +61,18 @@ public class App {
                     fetchAndDisplay();
                     paginationLoop();
                 }
+                //UPCOMING MOVIES
+                case "2" -> {
+                    currentMode = "upcoming";
+                    currentQuery = "Upcoming Movies";
+                    currentPage = 1;
+
+                    fetchAndDisplay();
+                    paginationLoop();
+                }
 
                 // POPULAR MOVIES
-                case "2" -> {
+                case "3" -> {
                     currentMode = "popular";
                     currentQuery = "Popular Movies";
                     currentPage = 1;
@@ -73,7 +82,7 @@ public class App {
                 }
 
                 //SEARCH BY GENRE (Category)
-                case "3" -> {
+                case "4" -> {
                     showGenres();
 
                     System.out.print("Enter genre ID: ");
@@ -107,6 +116,9 @@ public class App {
 
             case "search" ->
                     movieService.searchMovies(currentQuery, currentPage);
+
+            case "upcoming" ->
+                    movieService.getUpcomingMovies(currentPage);
 
             case "popular" ->
                     movieService.getPopularMovies(currentPage);
