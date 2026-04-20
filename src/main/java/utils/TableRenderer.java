@@ -139,12 +139,12 @@ public class TableRenderer {
 
     public static void tableMenu() {
 
-        Table tableMenu = new Table(2, BorderStyle.CLASSIC, ShownBorders.ALL);
+        Table tableMenu = new Table(1, BorderStyle.CLASSIC, ShownBorders.ALL);
 
         tableMenu.addCell("MOVIE SEARCH", CENTER, 1);
         tableMenu.addCell("1-> Search Movie");
-        tableMenu.addCell("2-> List Popular Movies");
-        tableMenu.addCell("3-> Search By Genre");
+        tableMenu.addCell("2-> Show Popular Movies");
+        tableMenu.addCell("3-> List Movie Category");
         tableMenu.addCell("0->Exit");
 
         System.out.println(tableMenu.render());
